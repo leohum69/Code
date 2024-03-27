@@ -14,3 +14,5 @@ mkdir Lab\ 12
 mkdir Lab\ 13
 mkdir Lab\ 14
 mkdir Lab\ 15
+mkdir Sessional
+mkdir Final
