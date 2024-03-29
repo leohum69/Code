@@ -1,7 +1,7 @@
 .model small
 .stack 100h
 .data
-msg1 db 'HELLO WORLD$'
+msg1 db 'hello world$'
 .code
 lowp proc
     push bp
@@ -12,7 +12,7 @@ lowp proc
     mov cx,11
     l1:
         mov al,[si]
-        add al,20h
+        sub al,20h
         mov [si],al
         inc si
     loop l1
