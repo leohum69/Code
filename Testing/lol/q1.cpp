@@ -7,75 +7,71 @@
 using namespace std;
 int main()
 {
-    int n;
-
-    cout << "enter n:";
-    cin >> n;
-
-    int fr = n;
-    pid_t p1;
-    int *rnf = new int[n];
-    int *freq = new int[n];
-    int pip[2];
-
-    for (int i = 0; i < n; i++)
+    pid_t lol;
+    int a = 1, b = 2, c = 3, d = 4;
+    int pipe1[2];
+    pipe(pipe1);
+    lol = fork();
+    if (lol == 0)
     {
-        pipe(pip);
-        p1 = fork();
-        
-        srand(time(NULL) + i);
-
-        if (p1 == 0)
+        int res = d * a;
+        close(pipe1[0]);
+        write(pipe1[1], &res, sizeof(res));
+        close(pipe1[1]);
+        exit(0);
+    }
+    else
+    {
+        wait(NULL);
+        int lol = 0;
+        close(pipe1[1]);
+        read(pipe1[0], &lol, sizeof(lol));
+        close(pipe1[0]);
+        int pipe2[2];
+        pipe(pipe2);
+        pid_t lol2;
+        lol2 = fork();
+        if (lol2 == 0)
         {
-            int randn = rand() % 10 + 1;
-            cout<<randn<<endl;
-
-            close(pip[0]);
-            write(pip[1], &randn, sizeof(randn));
-            close(pip[1]);
+            int res2 = a + b;
+            pid_t lol3;
+            int pipe3[2];
+            pipe(pipe3);
+            lol3 = fork();
+            if (lol3 == 0)
+            {
+                int res3 = c - a;
+                close(pipe3[0]);
+                write(pipe3[1], &res3, sizeof(res3));
+                close(pipe3[1]);
+                exit(0);
+            }
+            else
+            {
+                wait(NULL);
+                int nope;
+                close(pipe3[1]);
+                read(pipe3[0], &nope, sizeof(nope));
+                close(pipe3[0]);
+                res2 = res2 + nope;
+                close(pipe2[0]);
+                write(pipe2[1], &res2, sizeof(res2));
+                close(pipe2[1]);
+            }
             exit(0);
         }
         else
         {
-            int r = 0;
-            close(pip[1]);
-            read(pip[0], &r, sizeof(r));
-            cout << i << ":r =" << r << endl;
-            rnf[i] = r;
-            close(pip[0]);
             wait(NULL);
+            int x;
+            close(pipe2[1]);
+            read(pipe2[0], &x, sizeof(x));
+            close(pipe2[0]);
+
+            lol = lol * x;
+            cout << lol;
         }
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        int n1 = rnf[i];
-        for (int j = 0; j < n; j++)
-        {
-            if (n1 == rnf[j])
-            {
-                freq[i]++;
-            }
-        }
-    }
-
-    cout << "random n:" << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout << " " << rnf[i];
-    }
-
-    int gr = 0;
-    for (int i = 1; i < n; i++)
-    {
-
-        if (freq[i] > freq[gr])
-        {
-            gr = i;
-        }
-    }
-
-    cout << "\nthe highest gessed number is: " << rnf[gr] << endl;
-    delete[] rnf;
-    return 1;
+    return 0;
 }
