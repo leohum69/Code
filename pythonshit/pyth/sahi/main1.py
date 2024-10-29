@@ -36,3 +36,15 @@ while choice != "no":
         print("Your Decoded message is " + decode(message,shift))
     
     choice = input("You wanna go again ?\n")
+
+
+
+
+
+
+# age = input("What is your current age ? \n")
+
+
+# rem = 90-int(age)
+
+# print(f"You have {rem * 365} days, {rem * 52} weeks, and {rem * 12} months left.")
