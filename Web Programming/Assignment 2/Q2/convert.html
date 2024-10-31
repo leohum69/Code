@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="converter.js" defer></script>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+
+    <form id="currency-form">
+        <label for="usd">USD:</label>
+        <input type="number" id="usd" placeholder="0.00" oninput="convertCurrency('usd')">
+
+        <label for="gbp">GBP:</label>
+        <input type="number" id="gbp" placeholder="0.00" oninput="convertCurrency('gbp')">
+
+        <label for="cad">CAD:</label>
+        <input type="number" id="cad" placeholder="0.00" oninput="convertCurrency('cad')">
+
+        <label for="eur">EUR:</label>
+        <input type="number" id="eur" placeholder="0.00" oninput="convertCurrency('eur')">
+
+        <label for="aud">AUD:</label>
+        <input type="number" id="aud" placeholder="0.00" oninput="convertCurrency('aud')">
+    </form>
+</body>
+</html>

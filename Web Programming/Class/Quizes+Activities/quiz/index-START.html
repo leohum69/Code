@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Whack-a-mole! <span class="score">0</span></h1>
+  <button id="start-button">Start!</button>
+
+  <div class="message"></div> 
+  <div class="final-score" style="display: none;"></div>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      const holes = $('.hole');
+      const scoreBoard = $('.score');
+      const messageDisplay = $('.message');
+      const finalScoreDisplay = $('.final-score');
+      let timeUp = false;
+      let score = 0;
+      let numattempt = 0;
+
+
+      $('#start-button').click(function() {
+        score = 0;
+        scoreBoard.text(score);
+        timeUp = false;
+        messageDisplay.text('');
+        finalScoreDisplay.hide();
+
+        let gameDuration = 60000; 
+        let peepInterval = 700;
+        const endTime = Date.now() + gameDuration;
+
+        const peep = function() {
+          const timeLeft = endTime - Date.now();
+          if (timeLeft <= 0) {
+            timeUp = true;
+            finalScoreDisplay.text(`Final Score: ${score}\nNumber of attempts : ${numattempt}`);
+            finalScoreDisplay.show();
+            return;
+          }
+
+          const hole = randomHole();
+          hole.addClass('up');
+
+          setTimeout(() => {
+            hole.removeClass('up');
+            if (!timeUp) {
+              peep();
+            }
+          }, peepInterval);
+        };
+
+        peep();
+      });
+
+      function randomHole() {
+        const idx = Math.floor(Math.random() * holes.length);
+        return $(holes[idx]);
+      }
+
+      $('.mole').click(function(e) {
+        numattempt++;
+        const hole = $(this).parent();
+
+        if (hole.hasClass('up')) {
+          score++;
+          scoreBoard.text(score);
+          hole.removeClass('up');
+          messageDisplay.text('Hit!');
+        }
+
+        setTimeout(() => {
+          messageDisplay.text('Miss!');
+        }, 1000);
+      });
+
+      $(document).on('mousedown', function() {
+        $('body').addClass('pressed');
+      });
+
+      $(document).on('mouseup', function() {
+        $('body').removeClass('pressed');
+      });
+    });
+  </script>
+
+</body>
+</html>

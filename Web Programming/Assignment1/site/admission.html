@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - FAST University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="NU-logo.jpg" alt="FAST University Logo">
+            <h1>National University of Computer and Emerging Sciences</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Admission Form</h2>
+            <form action="#" method="post">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required><br>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required><br>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+                </fieldset>
+
+                <!-- Academic Information -->
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    <label for="previousSchool">Previous School/College:</label>
+                    <input type="text" id="previousSchool" name="previousSchool" required><br>
+
+                    <label for="qualifications">Highest Qualification:</label>
+                    <select id="qualifications" name="qualifications" required>
+                        <option value="">Select...</option>
+                        <option value="highschool">High School</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="bachelors">Bachelors</option>
+                        <option value="masters">Masters</option>
+                    </select><br>
+
+                    <label for="program">Program Applying For:</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select...</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="cyber">Cyber Security</option>
+                        <option value="ai">Artificial Intelligence</option>
+                        <option value="se">Software Engineering</option>
+                        <option value="management">Management</option>
+                    </select><br>
+
+                    <label for="gpa">GPA/Percentage:</label>
+                    <input type="text" id="gpa" name="gpa" required><br>
+                </fieldset>
+
+                <!-- Additional Information -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="extraActivities">Extracurricular Activities:</label>
+                    <textarea id="extraActivities" name="extraActivities" rows="4"></textarea><br>
+
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea><br>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FAST University. All rights reserved.</p>
+    </footer>
+</body>
+</html>

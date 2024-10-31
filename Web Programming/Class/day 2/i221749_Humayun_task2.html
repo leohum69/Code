@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my web</title>
+        <style>
+            table{
+                border: 1px dashed blue;
+                margin: 200px;
+                padding: 40px;
+                border-collapse: collapse;
+            }
+            tr,td{
+                border: 1px dashed blue;
+                padding: 40px 0px 0px 40px;
+                margin: 10px;
+            }
+            div{
+                border: 1px solid black;
+                width: 500px;
+                height: 500px;
+                float: left;
+                border-collapse: collapse;
+            }
+            .special{
+                color: aqua;
+            }
+            .special2{
+                color: blue;
+            }
+            .spoce{
+                background-color: brown;
+            }
+            a[href="https://www.google.com"]{
+                color: brown;
+            }
+            a:hover{
+                font-size: 50px;
+            }
+            #yt{
+                background-color: red;
+                color: white;
+                transition: background-color 0.5s;
+                box-shadow: 5px 6px 11px black;
+                
+            }
+            #yt:hover{
+                cursor: pointer;
+                background-color: blue;
+                box-shadow: 10px 12px 5px black;
+            }
+            #fb{
+                background-color: blue;
+                color: white;
+            }
+            #tw{
+                border-radius: 20px;
+                background-color: skyblue;
+                color: white;
+            }
+            #go{
+                background-color: white;
+                border-color: red;
+            }
+            
+            @media(min-width:500px){
+                h1::before{
+                    content: lol;
+                }
+                body{
+                    background-color: pink;
+                }
+        }
+            @media(max-width:499px){
+                h1::before{
+                    content: nolol;
+                }
+                body{
+                    background-color: black;
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h1></h1>
+
+        <button id="yt">YouTube</button>
+        <button id="fb">FaceBook</button>
+        <button id="tw">Twitter</button>
+        <button id="go">Google</button>
+
+        <ol>
+            <a href="https://www.google.com"><li>55<li></a>
+        </ol>
+        <div>
+            <p class="special">this is my page</p>
+            <p class="special">this is my page</p>    
+            <p class="special spoce">this is my page</p>
+            <p class="special">this is my page</p>
+            <img src="cat.jpg" alt="lol" width="50px" height="50px">
+        </div>
+        <div>
+            <p class="special2">this is my page</p>
+            <p class="special2">this is my page</p>    
+            <p class="special2">this is my page</p>
+            <p class="special2">this is my page</p>
+            <img src="cat.jpg" alt="lol" width="50px" height="50px">
+        </div>
+        <h1>ez</h1>
+        <p >this is my page</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>roll</th>
+                    <th>class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>leo</td>
+                    <td>1749</td>
+                    <td>pew</td>
+                </tr>
+                <tr>
+                    <td>chan</td>
+                    <td>1749</td>
+                    <td>pew</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

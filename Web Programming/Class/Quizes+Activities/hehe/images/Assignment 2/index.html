@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Background-Even.jpg'); /* Background */
+            background-size: cover;
+        }
+        #batsman {
+            position: absolute;
+            bottom: 100px;
+            left: 100px;
+            width: 150px;
+            height: 300px; /* Height is 300px */
+        }
+        #ball {
+            position: absolute;
+            bottom: 150px;
+            right: 50px;
+            width: 50px;
+        }
+        #scoreboard {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <img id="batsman" src="Player1.png" alt="Batsman">
+    <img id="ball" src="ball.png" alt="Ball">
+    <div id="scoreboard">Score: 0</div>
+</div>
+
+<script>
+    const batsman = document.getElementById('batsman');
+    const ball = document.getElementById('ball');
+    const scoreboard = document.getElementById('scoreboard');
+    let ballInterval;
+    let score = 0;
+    let ballMoving = false;
+    let ballNearBatsman = false;
+
+    const batsmanFoot = 100;   // Bottom position of the batsman
+    const batsmanHeight = 300; // Height of the batsman
+    const batsmanHead = batsmanFoot + batsmanHeight; // The top of the batsman
+
+    // Update the score
+    function updateScore(amount) {
+        score += amount;
+        scoreboard.textContent = `Score: ${score}`;
+    }
+
+    // Reset ball position and generate it randomly within batsman's full height range
+    function resetBall() {
+        const randomY = Math.floor(Math.random() * batsmanHeight) + batsmanFoot; // Random Y within range
+        ball.style.right = '50px'; // Reset position to the right
+        ball.style.bottom = randomY + 'px';
+        ballMoving = true; // Ball is now moving
+        ballNearBatsman = false; // Reset proximity flag
+    }
+
+    // Move the ball towards the batsman
+    function moveBall() {
+    let ballRight = parseInt(ball.style.right);
+    const batsmanRect = batsman.getBoundingClientRect();
+    const batsmanLeft = batsmanRect.right; // Get the right side of the batsman
+
+    ballInterval = setInterval(() => {
+        ballRight += 10; // Move the ball towards the batsman
+        ball.style.right = ballRight + 'px';
+
+        let ballBottom = parseInt(ball.style.bottom);
+
+        // Check if the ball is near the batsman (horizontally and vertically)
+        if (ballRight >= window.innerWidth - batsmanLeft && ballBottom >= batsmanFoot && ballBottom <= batsmanHead) {
+            ballNearBatsman = true;  // Ball is near the batsman
+        } else {
+            ballNearBatsman = false; // Not near the batsman
+        }
+
+        // If the ball crosses the batsman without being clicked, decrease score and respawn
+        if (ballRight > window.innerWidth) {
+            
+                updateScore(-5);  // Batsman missed the ball
+            
+            clearInterval(ballInterval); // Stop the ball movement
+            ballMoving = false; // Ball has stopped moving
+            resetBall(); // Reset ball
+            moveBall(); // Move ball again
+        }
+    }, 20);
+}
+
+
+    // Detect clicks on the batsman
+    batsman.addEventListener('click', () => {
+        if (ballNearBatsman && ballMoving) {
+            updateScore(5);  // Increase score when ball is near and batsman is clicked
+            resetBall();  // Reset the ball to the right side
+            clearInterval(ballInterval);  // Stop the current ball movement
+            moveBall();  // Start a new ball movement
+        }
+    }); 
+
+    // Start the game automatically
+    resetBall();  // Reset the ball
+    moveBall();   // Move the ball towards the batsman
+</script>
+
+</body>
+</html>

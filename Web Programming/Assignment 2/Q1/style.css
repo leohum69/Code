@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.fortune-box {
+    border: 2px solid #004c97;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#fortune-display {
+    color: #333;
+}
