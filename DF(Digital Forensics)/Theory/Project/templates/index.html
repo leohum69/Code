@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Triage Tool</title>
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 20px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+/* Button styling */
+button {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input file styling */
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #4CAF50;
+}
+
+/* Video player styling */
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Frame list container */
+.frame-list-container {
+    max-height: 450px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Frame list styling */
+.frame-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frame-list img {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.frame-list img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loader animation */
+.loader {
+    display: none;
+    margin: 30px auto;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 20px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Interval options container */
+div {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Radio button label styling */
+label {
+    margin: 0 20px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #4CAF50; /* For modern browsers to customize radio buttons */
+}
+
+/* Custom interval input styling */
+#customInterval {
+    width: 150px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    display: inline-block;
+}
+
+#customInterval:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+#customInterval:hover:enabled {
+    border-color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    label {
+        margin: 10px 15px;
+    }
+
+    #customInterval {
+        width: 120px;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .frame-list img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame-list img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Triage tool for video analysis</h1>
+        <input type="file" id="videoInput" accept="video/*">
+        <button id="loadVideoBtn">Load Video</button>
+
+
+        <div>
+            <label>
+                <input type="radio" name="intervalOption" value="automatic" checked> Automatic Interval
+            </label>
+            <label>
+                <input type="radio" name="intervalOption" value="custom"> Custom Interval (ms)
+            </label>
+            <input type="number" id="customInterval" min="100" placeholder="Enter delay in ms" disabled>
+        </div>
+
+
+        <video id="videoPlayer" controls></video>
+        <div class="loader" id="loader"></div>
+
+        <div class="frame-list-container">
+            <div class="frame-list" id="frameList"></div>
+        </div>
+    </div>
+
+    <script>
+         let intervalId;
+        document.addEventListener('DOMContentLoaded', function () {
+            const customIntervalInput = document.getElementById('customInterval');
+            document.getElementsByName('intervalOption').forEach(option => {
+                option.addEventListener('change', () => {
+                    customIntervalInput.disabled = option.value !== 'custom';
+                });
+            });
+            document.getElementById('loadVideoBtn').addEventListener('click', loadVideo);
+
+        });
+        
+        function loadVideo() {
+    const videoFile = document.getElementById('videoInput').files[0];
+    const intervalOption = document.querySelector('input[name="intervalOption"]:checked').value;
+    const customInterval = document.getElementById('customInterval').value;
+    
+    if (!videoFile) {
+        alert('Please select a video file first.');
+        return;
+    }
+    
+    const formData = new FormData();
+    formData.append('video_file', videoFile);
+    formData.append('intervalOption', intervalOption);  // Send intervalOption
+    if (intervalOption === 'custom') {
+        formData.append('custom_interval', customInterval);  // Only send custom interval if selected
+    }
+
+    fetch('/load_video', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.status);
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.src = data.video_url;
+        videoPlayer.load();
+        clearInterval(intervalId);
+
+        // Set dynamic interval based on custom or default 2000 ms
+        const frameUpdateInterval = intervalOption === 'custom' && customInterval ? parseInt(customInterval) : 2000;
+        intervalId = setInterval(updateFrames, frameUpdateInterval);
+
+    });
+}
+        
+        // function play() {
+        //     fetch('/play')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             alert(data.status);
+        //             document.getElementById('videoPlayer').play();
+        //         });
+        // }
+        
+
+        function updateFrames() {
+    fetch('/get_extracted_frames')
+        .then(response => response.json())
+        .then(framesData => {
+            const frameContainer = document.getElementById('frameList');
+            frameContainer.innerHTML = '';
+            framesData.forEach(frameData => {
+                const img = document.createElement('img');
+                img.src = frameData.url;
+                img.className = 'frame';
+                img.dataset.frame = frameData.frame;  // Store frame number for seeking
+                let lol = frameData.lol;
+                img.addEventListener('click', () => {
+                    console.log(frameData.frame);
+                    seekToFrame(frameData.frame,lol);
+                });
+
+                frameContainer.appendChild(img);
+            });
+        });
+}
+
+function seekToFrame(frameNumber,lol) {
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    // Calculate the time in seconds based on the frame interval
+    const timeInSeconds = frameNumber/lol;  // Convert from milliseconds to seconds
+    
+    //console.log(`Seeking to frame ${frameNumber}, which is ${timeInSeconds} seconds in the video.`);
+    
+    // Set the current time of the video to the calculated time in seconds
+    videoPlayer.currentTime = timeInSeconds;
+    
+    // Play the video from that position
+    videoPlayer.play();
+}
+        </script>
+
+    </script>
+</body>
+</html>
