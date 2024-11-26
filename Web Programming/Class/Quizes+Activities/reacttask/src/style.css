@@ -1,0 +1,32 @@
+/* Style the navigation container */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Style each navigation link */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add styling for the active link */
+.g {
+    background-color: #555;
+    color: #ffdd57;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #444;
+    color: #ffdd57;
+}
