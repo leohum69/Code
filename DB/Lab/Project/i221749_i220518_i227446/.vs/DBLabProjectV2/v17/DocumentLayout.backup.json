@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|d:\\fast\\sem5\\db lab\\newtableattached\\i221749_i220518_i227446\\query1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|solutionrelative:query1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|d:\\fast\\sem5\\db lab\\newtableattached\\i221749_i220518_i227446\\mdiparent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|solutionrelative:mdiparent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\query1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|solutionrelative:query1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|d:\\fast\\sem5\\db lab\\newtableattached\\i221749_i220518_i227446\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{199DD7AA-6CBC-4DC5-A6DE-3EC486A5D543}|DBLabProjectV2.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.cs",
+              "DocumentMoniker": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\login.cs",
+              "RelativeToolTip": "login.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAswEIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:34:08.383Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Query1.cs",
+              "DocumentMoniker": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\Query1.cs",
+              "RelativeDocumentMoniker": "Query1.cs",
+              "ToolTip": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\Query1.cs",
+              "RelativeToolTip": "Query1.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T11:45:15.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MDIParent1.cs",
+              "DocumentMoniker": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\MDIParent1.cs",
+              "RelativeDocumentMoniker": "MDIParent1.cs",
+              "ToolTip": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\MDIParent1.cs",
+              "RelativeToolTip": "MDIParent1.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAkwLAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:41:35.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\login.cs [Design]",
+              "RelativeToolTip": "login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:33:26.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Query1.cs [Design]",
+              "DocumentMoniker": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\Query1.cs",
+              "RelativeDocumentMoniker": "Query1.cs",
+              "ToolTip": "D:\\Fast\\sem5\\DB lab\\newtableattached\\i221749_i220518_i227446\\Query1.cs [Design]",
+              "RelativeToolTip": "Query1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:32:51.362Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
