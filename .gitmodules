@@ -16,3 +16,6 @@
 [submodule "OS/Theory/Project"]
 	path = OS/Theory/Project
 	url = https://github.com/leohum69/Ludo-with-Threads
+[submodule "PF/Theory/Project"]
+	path = PF/Theory/Project
+	url = https://github.com/leohum69/StockMarket-PF-project
