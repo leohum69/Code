@@ -4,3 +4,6 @@
 [submodule "Encryption-Ciphers"]
 	path = Encryption-Ciphers
 	url = https://github.com/leohum69/Encryption-Ciphers
+[submodule "COAL/Project"]
+	path = COAL/Project
+	url = https://github.com/leohum69/-Candy-Crush-Game-in-Assembly
