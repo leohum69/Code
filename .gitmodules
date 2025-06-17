@@ -7,3 +7,6 @@
 [submodule "COAL/Project"]
 	path = COAL/Project
 	url = https://github.com/leohum69/-Candy-Crush-Game-in-Assembly
+[submodule "DF(Digital Forensics)/Theory/Project"]
+	path = DF(Digital Forensics)/Theory/Project
+	url = https://github.com/leohum69/Cyber-Triage-Tool
