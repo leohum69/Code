@@ -22,3 +22,9 @@
 [submodule "Web Programming/Project"]
 	path = Web Programming/Project
 	url = https://github.com/leohum69/PeerLearn-Hub
+[submodule "AI/Lab"]
+	path = AI/Lab
+	url = https://github.com/leohum69/AiLab
+[submodule "AI/Theory/Project"]
+	path = AI/Theory/Project
+	url = https://github.com/leohum69/Movie-Summary-Analysis-Project
