@@ -19,3 +19,6 @@
 [submodule "PF/Theory/Project"]
 	path = PF/Theory/Project
 	url = https://github.com/leohum69/StockMarket-PF-project
+[submodule "Web Programming/Project"]
+	path = Web Programming/Project
+	url = https://github.com/leohum69/PeerLearn-Hub
