@@ -13,3 +13,6 @@
 [submodule "OOP/Theory/Project"]
 	path = OOP/Theory/Project
 	url = https://github.com/leohum69/HealthCare-Managment-System-OOP
+[submodule "OS/Theory/Project"]
+	path = OS/Theory/Project
+	url = https://github.com/leohum69/Ludo-with-Threads
