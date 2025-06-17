@@ -1,3 +1,6 @@
 [submodule "Data Structures/Theory/Project"]
 	path = Data Structures/Theory/Project
 	url = https://github.com/leohum69/Smart-City-Waste-Collection-Route-Optimization
+[submodule "Encryption-Ciphers"]
+	path = Encryption-Ciphers
+	url = https://github.com/leohum69/Encryption-Ciphers
